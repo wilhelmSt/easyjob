@@ -1,0 +1,64 @@
+.header {
+  background-color: #141447;
+  box-shadow: 1px 0px 1px 1px black;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  height: 4.2rem;
+  width: 100%;
+  padding: 0 4%;
+  
+  display: flex;
+  align-items: center;
+}
+
+.Row {
+  width: 100%;
+}
+
+.Col {
+  display: flex;
+  align-items: center;
+}
+
+.ColTitle {
+  justify-content: flex-start;
+}
+
+.ColButtons {
+  justify-content: flex-end;
+}
+
+h1 {
+  color: #f2f2f2;
+}
+
+.Button {
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 0.5px 0px 2px 1px #333;
+  
+  background-color: transparent;
+  background-image: linear-gradient(#f2f2f2 50%, #292994 50%);
+  background-size: 100% 200%;
+
+  color: #292994;
+  transition: 15  0ms ease-in all;
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  margin-left: 1rem;
+  height: 0px !important;
+  padding: 16px 18px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Button:hover {
+  background-position: 0% 100%;
+  color: #f2f2f2;
+}
