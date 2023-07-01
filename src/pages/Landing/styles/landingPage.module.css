@@ -1,16 +1,146 @@
 main {
-  height: calc(200vh - 8.4rem);
-  margin-top: 4.2rem;
+  background: linear-gradient(white 44%, lightblue 56%);
 }
 
 section {
-  height: 50%;
+  padding: 0 4%;
 }
 
 .section1 {
-  background-color: aqua;
+  margin-top: 4.2rem;
+  height: calc(100vh - 4.2rem);
+}
+
+.basicUse {
+  height: 100%;
+  width: 100%;
+  position: static;
+}
+
+.basicUse .colContentTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basicUse .colContentTitle div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.basicUse .colContentTitle h1 {
+  font-size: 3.8rem;
+  line-height: 4.5rem;
+  font-weight: 700;
+  color: #141447;
+
+  margin-bottom: 0.5rem;
+}
+
+.basicUse .colContentTitle h4 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  color: #666;
+
+  margin-bottom: -.5rem;
+}
+
+.basicUse .colContentTitle h6 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #666;
+}
+
+
+.basicUse .imgRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: 85%;
+}
+
+.imgColUpper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imgColBottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.imgUpper {
+  background-image: url("/public/prof1.png");
+ 
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+
+.imgBottom {
+  background-image: url("/public/prof2.png");
+
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
 }
 
 .section2 {
-  background-color: chartreuse;
+  height: 100vh;
+  padding-top: 4.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.section2 .section2Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section2 .titleWrapper {
+  width: 100%;
+  padding: 0 2%;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.titleWrapper div {
+  width: 45%;
+}
+
+.titleWrapper div h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+  color: #141447;
+
+  margin-bottom: 0.5rem;
+}
+
+.section2 .learnRow {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learnRow .learnCol {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }

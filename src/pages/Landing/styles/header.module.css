@@ -1,7 +1,4 @@
 .header {
-  background-color: #141447;
-  box-shadow: 1px 0px 1px 1px black;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +28,7 @@
   justify-content: flex-end;
 }
 
-h1 {
+.Col h1 {
   color: #f2f2f2;
 }
 
