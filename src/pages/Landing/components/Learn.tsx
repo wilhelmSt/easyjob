@@ -46,13 +46,13 @@ export default function Learn(): JSX.Element {
             style={{ flexDirection: isOdd ? 'row' : 'row-reverse' }}
             key={index}
           >
-            <Col span={12} className={styles.learnTab}>
+            <Col span={14} className={styles.learnTab}>
               <h1>{index+1}. {title}</h1>
               <h4>{description}</h4>
             </Col>
 
             <Col
-              span={12}
+              span={10}
               className={`${styles.learnTab} ${styles.learnImg}`}
             >
               {img}
