@@ -59,3 +59,29 @@
   background-position: 0% 100%;
   color: #f2f2f2;
 }
+
+.ButtonIsLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+
+  cursor: pointer;
+
+  background-color: #f2f2f2 !important;
+  color: #292994 !important;
+}
+
+.ButtonIsLogin:hover {
+  background-color: #292994 !important;
+  color: #f2f2f2 !important;
+}
+
+.ButtonIsLogin svg {
+  padding-bottom: 2px;
+}

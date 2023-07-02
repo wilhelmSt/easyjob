@@ -7,6 +7,7 @@ import './index.css';
 import LandingPage from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register isTeacher />,
+  },
+  {
+    path: '/home',
+    element: <Home />
   }
 ])
 

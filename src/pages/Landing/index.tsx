@@ -1,4 +1,4 @@
-import Header, { HeaderProps } from "./components/Header"
+import Header, { HeaderProps } from "../../components/Header"
 import Learn from "./components/Learn"
 
 import { useState } from 'react'
