@@ -1,0 +1,39 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+.registerWrapper {
+  /* background-color: #343467; */
+
+  /* border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 1px 2px 15px black; */
+  
+  height: 95%;
+  width: 75%;
+
+  padding: 3rem 4rem;
+  margin: 3rem auto
+}
+
+.stepsSpan {
+  color: white;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+
+.stepsIcon {
+  padding-top: 5px;
+}
+
+.buttonsOrg {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}

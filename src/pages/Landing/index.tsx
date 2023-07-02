@@ -45,12 +45,6 @@ export default function LandingPage(): JSX.Element {
         <section className={styles.section2}>
           <Row className={styles.basicUse}>
             <Col span={24} className={`${styles.basicUse} ${styles.section2Content}`}>
-              <div className={styles.titleWrapper}>
-                <div>
-                  <h1>Aprender nunca foi tão simples</h1>
-                </div>
-              </div>
-              
               <Row className={`${styles.basicUse} ${styles.learnRow}`}>
                 <Col span={20} className={`${styles.basicUse} ${styles.learnCol}`}>
                   <Learn />

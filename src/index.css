@@ -13,10 +13,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
   background: linear-gradient(#141447 0%, #3a065a 90%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
 }
 
 code {
