@@ -1,0 +1,55 @@
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.formItem > div {
+  width: 100%;
+}
+
+.formItem > div > div > label {
+  color: white !important;
+}
+
+.formItemButton > div > div > div > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.inputLogin {
+  width: 100%;
+}
+
+.buttonLogin {
+  background: linear-gradient(#4E0189 0%, #4C4DDC 30%);
+  background-size: 100% 200%;
+
+  width: 80%;
+  height: 40px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: all 300ms ease-out;
+}
+
+.buttonLogin:hover {
+  background-position: 0% 100%;
+}
+
+.spanRegister {
+  margin-top: 0.5rem;
+  color: rgb(32, 178, 170);
+  cursor: pointer;
+}
+
+.spanRegister:hover {
+  color: rgb(50, 220, 220);
+}
