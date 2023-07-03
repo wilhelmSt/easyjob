@@ -3,6 +3,7 @@ import { Row, Col, Button, Popover } from 'antd'
 import { UserOutlined, UserAddOutlined, LogoutOutlined } from '@ant-design/icons'
 
 import styles from './styles/header.module.css'
+import { Link } from 'react-router-dom'
 
 export interface HeaderProps {
   isTeacher: boolean,
@@ -10,7 +11,7 @@ export interface HeaderProps {
   isLogin?: boolean,
 }
 
-export default function Header({isTeacher, setIsTeacher, isLogin = true}: HeaderProps): JSX.Element {
+export default function Header({isTeacher, setIsTeacher, isLogin}: HeaderProps): JSX.Element {
   const [titleColor, setTitleColor] = useState('#f2f2f2')
   
   useEffect(() => {
@@ -56,7 +57,9 @@ export default function Header({isTeacher, setIsTeacher, isLogin = true}: Header
                 size='large'
                 className={styles.Button}
               >
-                <UserAddOutlined /> Dar Aulas
+                <Link to={`/register`}>
+                  <UserAddOutlined /> Dar Aulas
+                </Link>
               </Button>
 
               <Button
@@ -64,7 +67,9 @@ export default function Header({isTeacher, setIsTeacher, isLogin = true}: Header
                 size='large'
                 className={styles.Button}
               >
-                <UserAddOutlined /> Cadastro como pai
+                <Link to={`/register`}>
+                  <UserAddOutlined /> Cadastro como pai
+                </Link>
               </Button>
 
               <Button
@@ -72,7 +77,9 @@ export default function Header({isTeacher, setIsTeacher, isLogin = true}: Header
                 size='large'
                 className={styles.Button}
               >
-                <UserOutlined /> Login
+                <Link to={`/login`}>
+                  <UserOutlined /> Login
+                </Link>
               </Button>
             </>
           ) : (
