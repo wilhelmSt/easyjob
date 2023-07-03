@@ -1,0 +1,17 @@
+.table {
+  width: 95%;
+}
+
+.spanName {
+  color: #000;
+}
+
+.spanName:hover {
+  color: blue;
+}
+
+.numberClick {
+  color: green;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}

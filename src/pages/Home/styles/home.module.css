@@ -1,0 +1,40 @@
+.home {
+  margin-top: 4.2rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homeTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: white;
+  margin-top: 1rem;
+}
+
+.homeTitle h1 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.homeTitle h4 {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.teacherTable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
