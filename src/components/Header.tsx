@@ -6,12 +6,10 @@ import styles from './styles/header.module.css'
 import { Link } from 'react-router-dom'
 
 export interface HeaderProps {
-  isTeacher: boolean,
-  setIsTeacher: React.Dispatch<React.SetStateAction<boolean>>,
   isLogin?: boolean,
 }
 
-export default function Header({isTeacher, setIsTeacher, isLogin}: HeaderProps): JSX.Element {
+export default function Header({ isLogin}: HeaderProps): JSX.Element {
   const [titleColor, setTitleColor] = useState('#f2f2f2')
   
   useEffect(() => {
@@ -57,7 +55,7 @@ export default function Header({isTeacher, setIsTeacher, isLogin}: HeaderProps):
                 size='large'
                 className={styles.Button}
               >
-                <Link to={`/register`}>
+                <Link to={`/register?isTeacher=true`}>
                   <UserAddOutlined /> Dar Aulas
                 </Link>
               </Button>
@@ -67,7 +65,7 @@ export default function Header({isTeacher, setIsTeacher, isLogin}: HeaderProps):
                 size='large'
                 className={styles.Button}
               >
-                <Link to={`/register`}>
+                <Link to={`/register?isTeacher=false`}>
                   <UserAddOutlined /> Cadastro como pai
                 </Link>
               </Button>

@@ -1,22 +1,18 @@
-import Header, { HeaderProps } from "../../components/Header"
+import React from 'react'
+
+import Header from "../../components/Header"
 import Learn from "./components/Learn"
 
-import { useState } from 'react'
+import { ContextIsTeacherProvider, IsTeacherContext } from '../../context/ContextIsTeacherProvider'
+
 import { Col, Row } from 'antd'
 
 import styles from './styles/landingPage.module.css'
 
-export default function LandingPage(): JSX.Element {  
-  const [isTeacher, setIsTeacher] = useState(false)
-
-  const headerProps: HeaderProps = {
-    isTeacher,
-    setIsTeacher
-  }
-
+export default function LandingPage(): JSX.Element {
   return (
-    <>
-      <Header {...headerProps} />
+    <ContextIsTeacherProvider>
+      <Header />
       <main>
         <section className={styles.section1}>
           <Row gutter={[5, 10]} className={styles.basicUse}>
@@ -54,6 +50,6 @@ export default function LandingPage(): JSX.Element {
           </Row>
         </section>
       </main>
-    </>
+    </ContextIsTeacherProvider>
   )
 }

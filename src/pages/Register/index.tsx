@@ -1,27 +1,36 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { UserOutlined, SolutionOutlined } from '@ant-design/icons'
 import { Steps, Button, message } from "antd"
 
 import RegisterForm from "./components/RegisterForm"
 import RegisterFormTeacher from "./components/RegisterFormTeacher"
 
+import { useLocation } from 'react-router'
+
 import styles from './styles/register.module.css'
 
-export interface RegisterProps {
-  isTeacher: boolean
-}
+export default function Register(): JSX.Element {
+  const location = useLocation()
+  const [isTeacher, setIsTeacher] = useState(false)
 
-export default function Register({ isTeacher = false }: RegisterProps): JSX.Element {
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const teacher = params.get('isTeacher');
+    setIsTeacher(teacher === 'true')
+  }, [location.search])
+
   const steps = [
     {
       title: <span className={styles.stepsSpan}>Dados pessoais</span>,
       content: <RegisterForm />,
-      icon: <UserOutlined className={styles.stepsIcon} />
+      icon: <UserOutlined className={styles.stepsIcon} />,
+      disabled: false
     },
     {
       title: <span className={styles.stepsSpan}>Dados profissionais</span>,
       content: <RegisterFormTeacher />,
-      icon: <SolutionOutlined className={styles.stepsIcon} />
+      icon: <SolutionOutlined className={styles.stepsIcon} />,
+      disebled: isTeacher
     }
   ]
 
@@ -36,7 +45,7 @@ export default function Register({ isTeacher = false }: RegisterProps): JSX.Elem
   };
 
 
-  const items = steps.map((item) => ({ key: item.title, title: item.title, icon: item.icon }))
+  const items = steps.map((item) => ({ key: item.title, title: item.title, icon: item.icon, disabled: item.disabled }))
 
   return (
     <div className={styles.register}>
