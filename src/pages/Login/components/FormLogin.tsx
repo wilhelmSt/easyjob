@@ -1,12 +1,17 @@
 import { useState } from 'react'
-import { Form, Input, Button } from 'antd'
+import { Form, Input, Button, Switch } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
+import api from '../../../axios'
 
 import styles from '../styles/formLogin.module.css'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function FormLogin(): JSX.Element {
+  const navegate = useNavigate()
+
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
+  const [isProf, setIsProf] = useState(false)
 
   const [isValidUser, setIsValidUser] = useState(true)
 
@@ -26,6 +31,23 @@ export default function FormLogin(): JSX.Element {
       name="login"
       autoComplete=''
       layout='vertical'
+      onFinish={() => {
+        isProf
+          ? api.post('/professores/loginProfessores', {
+            email: user,
+            senha: password
+          }).then((res) => {
+            console.log(res)
+            navegate('/home')
+          })
+          : api.post('/aluno/loginAluno', {
+            email: user,
+            senha: password
+          }).then((res) => {
+            console.log(res)
+            navegate('/home')
+          })
+      }}
     >
       <Form.Item
         className={styles.formItem}
@@ -56,6 +78,14 @@ export default function FormLogin(): JSX.Element {
       </Form.Item>
 
       <Form.Item
+        className={styles.formItem}
+      >
+        <span className={styles.spanSwitch}>Pai/Aluno</span>
+        <Switch onChange={(e) => setIsProf(e)}/>
+        <span className={styles.spanSwitch}>Professor</span>
+      </Form.Item>
+
+      <Form.Item
         className={styles.formItemButton}
       >
         <Button
@@ -65,7 +95,14 @@ export default function FormLogin(): JSX.Element {
         >
           Entrar
         </Button>
-        <span className={styles.spanRegister}>Cadastre-se!</span>
+
+        <Link to='/register?isTeacher=false' className={styles.linkRegister}>
+          <span className={styles.spanRegister}>Cadastre-se como Pai/Aluno!</span>
+        </Link>
+
+        <Link to='/register?isTeacher=true' className={styles.linkRegister}>
+          <span className={styles.spanRegister}>Cadastre-se como Professor!</span>
+        </Link>
       </Form.Item>
     </Form>
   )
